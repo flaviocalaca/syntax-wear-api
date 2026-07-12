@@ -2,10 +2,10 @@ import 'dotenv/config'
 import Fastify from 'fastify'
 import cors from '@fastify/cors'
 import helmet from '@fastify/helmet'
-import { timeStamp } from 'node:console'
 
 
 const PORT = parseInt(process.env.PORT ?? '3000')
+const HOST = process.env.HOST ?? '0.0.0.0'
 
 const fastify = Fastify({
   logger: true
@@ -39,7 +39,7 @@ fastify.get('/health', async (request, reply) => {
 
 
 // Run the server!
-fastify.listen({ port: PORT }, function (err, address) {
+fastify.listen({ port: PORT, host: HOST }, function (err, address) {
   if (err) {
     fastify.log.error(err)
     process.exit(1)

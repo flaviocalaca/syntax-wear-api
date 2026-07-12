@@ -1,0 +1,12 @@
+# Arquivos de ambiente e sensíveis
+.env
+.env.*
+*.pem
+*.key
+
+# Dependências
+node_modules/
+
+# Builds e artefatos de compilação
+dist/
+build/
