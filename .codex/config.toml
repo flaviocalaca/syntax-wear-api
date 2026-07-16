@@ -1,0 +1,5 @@
+[mcp_servers.supabase]
+url = "https://mcp.supabase.com/mcp?project_ref=xbvmahlgdvorybyqovqe"
+auth = "oauth"
+default_tools_approval_mode = "prompt"
+tool_timeout_sec = 60
